@@ -1,0 +1,2 @@
+# DatabasesBasics-MSSQLServer
+The course introduces us to one of the most widely used database management systems (DBMS) used in the development of modern information systems - Microsoft SQL Server. The course focuses on relational modeling, data modeling with ER diagrams (tables and relational links) and SQL language (data retrieval, selection, projection, joining, aggregation, grouping, modification, deletion and insertion).
