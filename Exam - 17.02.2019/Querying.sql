@@ -41,10 +41,10 @@ GROUP BY s.FirstName, s.LastName
 
 --9
  
-SELECT
-	   t.FirstName + ' ' + t.LastName,
+SELECT 
+	   t.FirstName + ' ' + t.LastName AS FullName,
 	   sub.[Name] + '-' + CAST(sub.Lessons AS VARCHAR) AS Subjects,
-	   COUNT(st.StudentId) AS countOfT
+	   COUNT(st.StudentId) AS Students
   FROM Students AS s
   JOIN StudentsTeachers AS st
     ON st.StudentId = s.Id
@@ -53,7 +53,7 @@ SELECT
   JOIN Subjects AS sub
     ON sub.Id = t.SubjectId
 GROUP BY t.FirstName, t.LastName, sub.[Name], sub.Lessons
-ORDER BY countOfT DESC
+ORDER BY Students DESC, FullName, sub.[Name]
 
 --10
 

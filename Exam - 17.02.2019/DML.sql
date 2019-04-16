@@ -20,7 +20,7 @@ WHERE SubjectId IN(1, 2) AND Grade >= 5.50
 
 --4
 DELETE FROM StudentsTeachers
-WHERE TeacherId IN (7, 12, 15, 18, 24, 26)
+ WHERE TeacherId IN (SELECT Id FROM Teachers WHERE Phone LIKE '%72%')
 
 DELETE FROM Teachers
 Where Phone LIKE('%72%')
